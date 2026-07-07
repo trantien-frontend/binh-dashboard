@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo báo cáo nhân sự 06 tháng 2026</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-logo">A</div>
+          <div>
+            <h2>ADAVIGO</h2>
+            <p>HR Dashboard</p>
+          </div>
+        </div>
+        <nav>
+          <a class="active" href="#overview">Tổng quan</a>
+          <a href="#charts">Biểu đồ</a>
+          <a href="#employees">Nhân sự</a>
+          <a href="#plans">Kế hoạch</a>
+        </nav>
+        <div class="admin-profile">
+          <img src="avartar.png" alt="Admin Avatar" class="admin-avatar">
+          <div class="admin-info">
+            <span class="admin-name">Ngô Phương Bình</span>
+            <span class="admin-role">HR</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section id="overview" class="hero reveal">
+          <div>
+            <p class="eyebrow">Báo cáo nhân sự</p>
+            <h1>06 tháng đầu năm 2026</h1>
+            <p class="hero-text">
+              Dashboard demo được dựng từ file Excel: tổng hợp nhân sự, giới
+              tính, độ tuổi, phòng ban và kế hoạch hành động 06 tháng cuối năm.
+            </p>
+          </div>
+          <div class="hero-card">
+            <span>Nhân sự hiện hữu</span>
+            <strong id="heroTotal">0</strong>
+            <small>Tính đến thời điểm báo cáo</small>
+          </div>
+        </section>
+
+        <section class="kpi-grid reveal" id="kpiGrid"></section>
+
+        <section id="charts" class="grid-2 reveal">
+          <article class="card">
+            <div class="card-header">
+              <h3>Cơ cấu giới tính</h3>
+              <span class="badge">Nam / Nữ</span>
+            </div>
+            <canvas id="genderChart" height="220"></canvas>
+          </article>
+          <article class="card">
+            <div class="card-header">
+              <h3>Top phòng ban</h3>
+              <span class="badge">Theo số lượng</span>
+            </div>
+            <div id="departmentBars" class="bars"></div>
+          </article>
+        </section>
+
+        <section class="grid-2 reveal">
+          <article class="card note-card">
+            <div class="card-header"><h3>Nhận xét nhanh</h3></div>
+            <p id="reportNote"></p>
+          </article>
+          <article class="card">
+            <div class="card-header"><h3>Nhân sự theo nơi làm việc</h3></div>
+            <div id="locationCards" class="location-grid"></div>
+          </article>
+        </section>
+
+        <section id="employees" class="card table-card reveal">
+          <div class="table-toolbar">
+            <div>
+              <h3>Danh sách nhân sự</h3>
+              <p id="tableCount">0 nhân sự</p>
+            </div>
+            <div class="filters">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Tìm theo tên, mã, phòng ban..."
+              />
+              <select id="departmentFilter">
+                <option value="">Tất cả phòng ban</option>
+              </select>
+              <select id="locationFilter">
+                <option value="">Tất cả nơi làm việc</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã code</th>
+                  <th>Họ tên</th>
+                  <th>Phòng ban</th>
+                  <th>Chức danh</th>
+                  <th>Giới tính</th>
+                  <th>Nơi làm việc</th>
+                </tr>
+              </thead>
+              <tbody id="employeeTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="plans" class="card reveal">
+          <div class="card-header">
+            <h3>Kế hoạch / Hành động 06 tháng cuối năm</h3>
+          </div>
+          <div id="planList" class="plans"></div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
