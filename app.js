@@ -680,6 +680,11 @@ const DATA = {
       "stt": 3,
       "title": "Gắn kết nội bộ",
       "action": "Tổ chức Outing 25/08–30/08/2026.\n* Tỷ lệ tham gia ≥95%.\n* Kết hợp Team Building và nâng cao mức độ gắn kết giữa các phòng ban."
+    },
+    {
+      "stt": 4,
+      "title": "Khen thưởng",
+      "action": "* Khen thưởng các tập thể đạt thành tích xuất sắc trong hoạt động kinh doanh 06 tháng đầu năm.\n* Ghi nhận, khích lệ tinh thần làm việc và tạo động lực phấn đấu hoàn thành mục tiêu kinh doanh 06 tháng cuối năm."
     }
   ],
   "note": "Tính đến thời điểm hiện tại, tình hình nhân sự có sự chuyển động tích cực so với cuối năm 2025. Cụ thể như sau:\n- Số lượng nhân sự tuyển được: 36\n- Số lương nghỉ việc: 12\n- Số lượng nhân sự hiện hữu: 24 \n(* Số lượng nhân sự được tính bao gồm Thực tập sinh và nhân viên của tất cả phòng ban)\n"
