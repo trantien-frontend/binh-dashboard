@@ -564,7 +564,7 @@ const DATA = {
       "stt": 57,
       "code": "ADV0691",
       "name": "Nguyễn Ngọc Hà",
-      "department": "Phòng kinh doanh lữ hành HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Nhân viên Kinh doanh Khách đoàn",
       "gender": "Nữ",
       "location": "Hồ Chí Minh",
@@ -778,7 +778,9 @@ function renderTable() {
   const location = $('#locationFilter').value;
   const rows = DATA.employees.filter(item => {
     const text = `${item.code} ${item.name} ${item.department} ${item.position}`.toLowerCase();
-    return (!keyword || text.includes(keyword)) && (!department || item.department === department) && (!location || item.location === location);
+    return (!keyword || text.includes(keyword)) && 
+           (!department || item.department.toLowerCase() === department.toLowerCase()) && 
+           (!location || item.location.toLowerCase() === location.toLowerCase());
   });
 
   $('#tableCount').textContent = `${rows.length} nhân sự`;
