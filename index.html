@@ -19,7 +19,6 @@
         <nav>
           <a class="active" href="#overview">Tổng quan</a>
           <a href="#charts">Biểu đồ</a>
-          <a href="#employees">Nhân sự</a>
           <a href="#plans">Kế hoạch</a>
         </nav>
         <div class="admin-profile">
@@ -76,44 +75,6 @@
             <div class="card-header"><h3>Nhân sự theo nơi làm việc</h3></div>
             <div id="locationCards" class="location-grid"></div>
           </article>
-        </section>
-
-        <section id="employees" class="card table-card reveal">
-          <div class="table-toolbar">
-            <div>
-              <h3>Danh sách nhân sự</h3>
-              <p id="tableCount">0 nhân sự</p>
-            </div>
-            <div class="filters">
-              <input
-                id="searchInput"
-                type="text"
-                placeholder="Tìm theo tên, mã, phòng ban..."
-              />
-              <select id="departmentFilter">
-                <option value="">Tất cả phòng ban</option>
-              </select>
-              <select id="locationFilter">
-                <option value="">Tất cả nơi làm việc</option>
-              </select>
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>STT</th>
-                  <th>Mã code</th>
-                  <th>Họ tên</th>
-                  <th>Phòng ban</th>
-                  <th>Chức danh</th>
-                  <th>Giới tính</th>
-                  <th>Nơi làm việc</th>
-                </tr>
-              </thead>
-              <tbody id="employeeTable"></tbody>
-            </table>
-          </div>
         </section>
 
         <section id="plans" class="card reveal">

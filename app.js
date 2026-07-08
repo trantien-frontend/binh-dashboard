@@ -674,7 +674,7 @@ const DATA = {
     {
       "stt": 2,
       "title": "Mở rộng quy mô nhân sự",
-      "action": "Triển khai chiến dịch tuyển dụng cho VP Hồ Chí Minh và Hà Nội nhằm mở rộng đội ngũ kinh doanh.\nMục tiêu:\n* Thành lập 01 Trưởng nhóm Kinh doanh PKS.\n* Tuyển mới 03–05 Nhân viên Kinh doanh PKS."
+      "action": "Triển khai kế hoạch tuyển dụng 06 tháng cuối năm 2026 nhằm đáp ứng mục tiêu tăng trưởng kinh doanh, mở rộng quy mô nhân sự tại hai chi nhánh Hà Nội và Hồ Chí Minh, đồng thời đảm bảo nguồn nhân lực thay thế cho các vị trí phát sinh.\nMục tiêu tuyển dụng tăng trưởng:\nChi nhánh Hồ Chí Minh:\nTuyển mới 12 - 15 nhân sự, với các vị trí:\n* Nhân sự Điều hành Tour nhằm đáp ứng nhu cầu vận hành và phát triển sản phẩm.\n* Thành lập 01 Phòng Kinh doanh Khách sạn, quy mô 03 - 05 nhân sự, từng bước xây dựng đội ngũ kinh doanh chuyên trách tại khu vực phía Nam.\nChi nhánh Hà Nội:\nTuyển mới 05 - 10 nhân sự với các vị trí:\n* Thành lập 01 Phòng Kinh doanh Khách sạn, quy mô 03 - 05 nhân sự.\n* Tuyển bổ sung 03 Nhân viên Kinh doanh Tour Khách đoàn để phát triển phân khúc khách doanh nghiệp.\n* Tuyển 01 - 02 vị trí bổ sung khác theo nhu cầu phát sinh của các phòng ban.\n\nBên cạnh kế hoạch tuyển dụng tăng trưởng, Phòng Hành chính - Nhân sự sẽ chủ động tuyển dụng thay thế đối với các vị trí phát sinh do nghỉ việc, điều chuyển hoặc bổ sung nhân sự, nhằm đảm bảo hoạt động của các phòng ban được duy trì ổn định và không ảnh hưởng đến tiến độ kinh doanh."
     },
     {
       "stt": 3,
@@ -687,7 +687,7 @@ const DATA = {
       "action": "* Khen thưởng các tập thể đạt thành tích xuất sắc trong hoạt động kinh doanh 06 tháng đầu năm.\n* Ghi nhận, khích lệ tinh thần làm việc và tạo động lực phấn đấu hoàn thành mục tiêu kinh doanh 06 tháng cuối năm."
     }
   ],
-  "note": "Tính đến thời điểm hiện tại, tình hình nhân sự có sự chuyển động tích cực so với cuối năm 2025. Cụ thể như sau:\n- Số lượng nhân sự tuyển được: 36\n- Số lương nghỉ việc: 12\n- Số lượng nhân sự hiện hữu: 24 \n(* Số lượng nhân sự được tính bao gồm Thực tập sinh và nhân viên của tất cả phòng ban)\n"
+  "note": "Trong 06 tháng đầu năm 2026, công tác tuyển dụng của Công ty đã đáp ứng cơ bản nhu cầu bổ sung nhân sự cho các phòng ban, góp phần đảm bảo hoạt động kinh doanh và vận hành diễn ra ổn định. Tính đến thời điểm báo cáo, Công ty đã tuyển mới 36 nhân sự, phát sinh 12 trường hợp nghỉ việc, đưa tổng số nhân sự hiện hữu lên 24 người (bao gồm thực tập sinh và nhân viên thuộc tất cả các phòng ban).\n\nMặc dù đã đạt được kết quả tích cực trong việc thu hút và bổ sung nguồn nhân lực, tình hình biến động nhân sự vẫn diễn ra ở một số vị trí, đặc biệt là khối kinh doanh. Do đó, trong 06 tháng cuối năm, Phòng Hành chính - Nhân sự sẽ tập trung triển khai kế hoạch tuyển dụng theo hai định hướng trọng tâm: tuyển dụng tăng trưởng nhằm đáp ứng kế hoạch mở rộng quy mô kinh doanh và tuyển dụng thay thế để kịp thời bổ sung nguồn nhân lực phát sinh, đảm bảo duy trì sự ổn định và hiệu quả hoạt động của Công ty.\n\nSố liệu tổng hợp:\n- Nhân sự tuyển mới: 36\n- Nhân sự nghỉ việc: 12\n- Nhân sự hiện hữu: 24\n\nLưu ý: Số liệu trên bao gồm thực tập sinh và nhân viên thuộc tất cả các phòng ban."
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -733,14 +733,16 @@ function drawGenderChart() {
     start += angle;
   });
 
-  ctx.fillStyle = '#172033';
-  ctx.font = '600 14px Arial';
+  ctx.font = '600 13px "Plus Jakarta Sans", sans-serif';
+  const legendWidth = items.length * 110 - 30;
+  const startX = (canvas.width - legendWidth) / 2;
+  
   items.forEach(([label, value], index) => {
-    const x = 30 + index * 120;
+    const x = startX + index * 110;
     ctx.fillStyle = colors[index % colors.length];
-    ctx.fillRect(x, 185, 14, 14);
-    ctx.fillStyle = '#172033';
-    ctx.fillText(`${label}: ${value}`, x + 22, 197);
+    ctx.fillRect(x, 184, 12, 12);
+    ctx.fillStyle = '#1e293b';
+    ctx.fillText(`${label}: ${value}`, x + 18, 195);
   });
 }
 
@@ -835,11 +837,8 @@ function boot() {
   drawGenderChart();
   renderDepartmentBars();
   renderLocations();
-  fillFilters();
-  renderTable();
   renderPlans();
   initScrollAnimations();
-  ['#searchInput', '#departmentFilter', '#locationFilter'].forEach(selector => $(selector).addEventListener('input', renderTable));
 }
 
 boot();
