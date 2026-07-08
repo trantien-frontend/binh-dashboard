@@ -748,7 +748,7 @@ function drawGenderChart() {
 }
 
 function renderDepartmentBars() {
-  const departments = Object.entries(countBy('department')).sort(byValueDesc).slice(0, 8);
+  const departments = Object.entries(countBy('department')).sort(byValueDesc);
   const max = Math.max(...departments.map(item => item[1]));
   $('#departmentBars').innerHTML = departments.map(([name, value]) => `
     <div class="bar-row">
