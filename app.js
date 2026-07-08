@@ -710,7 +710,10 @@ function countBy(key) {
 function drawGenderChart() {
   const canvas = $('#genderChart');
   const ctx = canvas.getContext('2d');
-  const gender = countBy('gender');
+  const gender = {
+    "Nam": DATA.summary.find(item => item.label === 'Nam')?.value || 0,
+    "Nữ": DATA.summary.find(item => item.label === 'Nữ')?.value || 0
+  };
   const total = Object.values(gender).reduce((a, b) => a + b, 0);
   const items = Object.entries(gender);
   const colors = ['#2563eb', '#38bdf8', '#94a3b8'];
