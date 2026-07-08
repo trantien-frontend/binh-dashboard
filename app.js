@@ -25,7 +25,7 @@ const DATA = {
       "code": "ADV0708",
       "name": "Trần Đình Trung",
       "department": "BGĐ",
-      "position": "Giám đốc Công ty",
+      "position": "Thành viên hội đồng quản trị",
       "gender": "Nam",
       "location": "Hà Nội",
       "age": null
@@ -574,7 +574,7 @@ const DATA = {
       "stt": 58,
       "code": "ADV0524",
       "name": "Phan Duy Khải",
-      "department": "Phòng Kinh doanh lữ hành 1 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Trưởng nhóm Kinh doanh",
       "gender": "Nam",
       "location": "Hồ Chí Minh",
@@ -584,7 +584,7 @@ const DATA = {
       "stt": 59,
       "code": "ADV0592",
       "name": "Trần Thị Bích Trân",
-      "department": "Phòng Kinh doanh lữ hành 1 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Nhân viên Kinh doanh",
       "gender": "Nữ",
       "location": "Hồ Chí Minh",
@@ -594,7 +594,7 @@ const DATA = {
       "stt": 60,
       "code": "ADV0681",
       "name": "Hà Thị Ngọc Hiền",
-      "department": "Phòng Kinh doanh lữ hành 1 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Nhân viên Kinh doanh Khách đoàn",
       "gender": "Nữ",
       "location": "Hồ Chí Minh",
@@ -604,7 +604,7 @@ const DATA = {
       "stt": 61,
       "code": "ADV0488",
       "name": "Nguyễn Văn Xuân Danh",
-      "department": "Phòng Kinh doanh lữ hành 2 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Trưởng nhóm Kinh doanh",
       "gender": "Nam",
       "location": "Hồ Chí Minh",
@@ -614,7 +614,7 @@ const DATA = {
       "stt": 62,
       "code": "ADV0671",
       "name": "Nguyễn Tường Vy",
-      "department": "Phòng Kinh doanh lữ hành 2 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Nhân viên Kinh doanh Khách đoàn",
       "gender": "Nữ",
       "location": "Hồ Chí Minh",
@@ -624,7 +624,7 @@ const DATA = {
       "stt": 63,
       "code": "ADV0672",
       "name": "Nguyễn Như Huỳnh",
-      "department": "Phòng Kinh doanh lữ hành 2 HCM",
+      "department": "Phòng Kinh doanh lữ hành HCM",
       "position": "Nhân viên Kinh doanh Khách đoàn",
       "gender": "Nữ",
       "location": "Hồ Chí Minh",
@@ -650,11 +650,11 @@ const DATA = {
     },
     {
       "label": "Nam",
-      "value": 53
+      "value": 10
     },
     {
       "label": "Nữ",
-      "value": 10
+      "value": 53
     },
     {
       "label": "Độ tuổi từ 20 tuổi - 35 tuổi",
@@ -715,10 +715,7 @@ function countBy(key) {
 function drawGenderChart() {
   const canvas = $('#genderChart');
   const ctx = canvas.getContext('2d');
-  const gender = {
-    "Nam": DATA.summary.find(item => item.label === 'Nam')?.value || 0,
-    "Nữ": DATA.summary.find(item => item.label === 'Nữ')?.value || 0
-  };
+  const gender = countBy('gender');
   const total = Object.values(gender).reduce((a, b) => a + b, 0);
   const items = Object.entries(gender);
   const colors = ['#2563eb', '#38bdf8', '#94a3b8'];
