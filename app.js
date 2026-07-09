@@ -674,7 +674,7 @@ const DATA = {
     {
       "stt": 2,
       "title": "Mở rộng quy mô nhân sự",
-      "action": "Triển khai kế hoạch tuyển dụng 06 tháng cuối năm 2026 nhằm đáp ứng mục tiêu tăng trưởng kinh doanh, mở rộng quy mô nhân sự tại hai chi nhánh Hà Nội và Hồ Chí Minh, đồng thời đảm bảo nguồn nhân lực thay thế cho các vị trí phát sinh.\nMục tiêu tuyển dụng tăng trưởng:\nChi nhánh Hồ Chí Minh:\nTuyển mới 12 - 15 nhân sự, với các vị trí:\n* Nhân sự Điều hành Tour nhằm đáp ứng nhu cầu vận hành và phát triển sản phẩm.\n* Thành lập 01 Phòng Kinh doanh Khách sạn, quy mô 03 - 05 nhân sự, từng bước xây dựng đội ngũ kinh doanh chuyên trách tại khu vực phía Nam.\nChi nhánh Hà Nội:\nTuyển mới 05 - 10 nhân sự với các vị trí:\n* Thành lập 01 Phòng Kinh doanh Khách sạn, quy mô 03 - 05 nhân sự.\n* Tuyển bổ sung 03 Nhân viên Kinh doanh Tour Khách đoàn để phát triển phân khúc khách doanh nghiệp.\n* Tuyển 01 - 02 vị trí bổ sung khác theo nhu cầu phát sinh của các phòng ban.\n\nBên cạnh kế hoạch tuyển dụng tăng trưởng, Phòng Hành chính - Nhân sự sẽ chủ động tuyển dụng thay thế đối với các vị trí phát sinh do nghỉ việc, điều chuyển hoặc bổ sung nhân sự, nhằm đảm bảo hoạt động của các phòng ban được duy trì ổn định và không ảnh hưởng đến tiến độ kinh doanh."
+      "action": "Triển khai kế hoạch tuyển dụng 06 tháng cuối năm 2026 nhằm đáp ứng mục tiêu mở rộng kinh doanh, tăng trưởng nhân sự tại hai chi nhánh hà nội và hồ chí minh, đồng thời đảm bảo nguồn nhân lực thay thế khi phát sinh.\nChi nhánh hồ chí minh:\n- Tuyển mới 12–15 nhân sự.\n- Bổ sung vị trí điều hành tour.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\nChi nhánh hà nội:\n- Tuyển mới 05–10 nhân sự.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\n- Tuyển 03 nhân viên kinh doanh tour khách đoàn.\nTuyển dụng thay thế:\n- Chủ động tuyển dụng thay thế các vị trí phát sinh do nghỉ việc, điều chuyển hoặc bổ sung nhân sự, đảm bảo hoạt động của các phòng ban không bị gián đoạn."
     },
     {
       "stt": 3,
@@ -687,7 +687,7 @@ const DATA = {
       "action": "* Khen thưởng các tập thể đạt thành tích xuất sắc trong hoạt động kinh doanh 06 tháng đầu năm.\n* Ghi nhận, khích lệ tinh thần làm việc và tạo động lực phấn đấu hoàn thành mục tiêu kinh doanh 06 tháng cuối năm."
     }
   ],
-  "note": "Trong 06 tháng đầu năm 2026, công tác tuyển dụng của Công ty đã đáp ứng cơ bản nhu cầu bổ sung nhân sự cho các phòng ban, góp phần đảm bảo hoạt động kinh doanh và vận hành diễn ra ổn định. Tính đến thời điểm báo cáo, Công ty đã tuyển mới 36 nhân sự, phát sinh 12 trường hợp nghỉ việc, đưa tổng số nhân sự hiện hữu lên 24 người (bao gồm thực tập sinh và nhân viên thuộc tất cả các phòng ban).\n\nMặc dù đã đạt được kết quả tích cực trong việc thu hút và bổ sung nguồn nhân lực, tình hình biến động nhân sự vẫn diễn ra ở một số vị trí, đặc biệt là khối kinh doanh. Do đó, trong 06 tháng cuối năm, Phòng Hành chính - Nhân sự sẽ tập trung triển khai kế hoạch tuyển dụng theo hai định hướng trọng tâm: tuyển dụng tăng trưởng nhằm đáp ứng kế hoạch mở rộng quy mô kinh doanh và tuyển dụng thay thế để kịp thời bổ sung nguồn nhân lực phát sinh, đảm bảo duy trì sự ổn định và hiệu quả hoạt động của Công ty.\n\nSố liệu tổng hợp:\n- Nhân sự tuyển mới: 36\n- Nhân sự nghỉ việc: 12\n- Nhân sự hiện hữu: 24\n\nLưu ý: Số liệu trên bao gồm thực tập sinh và nhân viên thuộc tất cả các phòng ban."
+  "note": "06 tháng đầu năm 2026, công tác tuyển dụng cơ bản đáp ứng nhu cầu nhân sự của Công ty với 36 nhân sự tuyển mới, 12 trường hợp nghỉ việc và 24 nhân sự tuyển mới đang làm việc.\n\n06 tháng cuối năm, Phòng Hành chính - Nhân sự sẽ tập trung tuyển dụng tăng trưởng và tuyển dụng thay thế nhằm đáp ứng mục tiêu mở rộng kinh doanh và ổn định nguồn nhân lực."
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -798,25 +798,55 @@ function formatPlanAction(text) {
     line = line.trim();
     if (!line) return;
     if (line.startsWith('*') || line.startsWith('-')) {
-      if (!inList) { html += '<ul style="padding-left: 20px; margin: 8px 0; color: #475569; line-height: 1.6;">'; inList = true; }
-      html += `<li style="margin-bottom: 4px;">${line.substring(1).trim()}</li>`;
+      if (!inList) { html += '<ul style="padding-left: 20px; margin: 10px 0 16px 0; color: #475569; line-height: 1.6;">'; inList = true; }
+      html += `<li style="margin-bottom: 6px;">${line.substring(1).trim()}</li>`;
     } else {
       if (inList) { html += '</ul>'; inList = false; }
-      html += `<div style="font-weight: 600; color: #334155; margin-top: 8px;">${line}</div>`;
+      html += `<div style="font-weight: 600; color: #1e293b; margin-top: 16px; margin-bottom: 8px; line-height: 1.5;">${line}</div>`;
     }
   });
   if (inList) html += '</ul>';
   return html;
 }
 
+let activePlanTab = 1;
+
+function selectPlanTab(stt) {
+  activePlanTab = stt;
+  const navContainer = $('#planTabsNav');
+  const contentContainer = $('#planTabPaneContent');
+  if (!navContainer || !contentContainer) return;
+
+  navContainer.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.stt) === stt);
+  });
+
+  const plan = DATA.plans.find(p => p.stt === stt);
+  if (!plan) return;
+
+  contentContainer.classList.remove('fade-in');
+  void contentContainer.offsetWidth; // Trigger reflow
+  contentContainer.innerHTML = `
+    <h4 style="margin: 0 0 14px 0; font-size: 16px; color: #0f172a; font-weight: 700;">${plan.title}</h4>
+    <div class="plan-desc" style="font-size: 14px;">${formatPlanAction(plan.action)}</div>
+  `;
+  contentContainer.classList.add('fade-in');
+}
+window.selectPlanTab = selectPlanTab;
+
 function renderPlans() {
   $('#reportNote').textContent = DATA.note;
-  $('#planList').innerHTML = DATA.plans.map(plan => `
-    <article class="plan">
-      <div class="plan-number">${plan.stt}</div>
-      <div><h4>${plan.title}</h4><div class="plan-desc" style="font-size: 14px;">${formatPlanAction(plan.action)}</div></div>
-    </article>
+  const navContainer = $('#planTabsNav');
+  if (!navContainer) return;
+
+  navContainer.innerHTML = DATA.plans.map(plan => `
+    <button class="tab-btn ${plan.stt === activePlanTab ? 'active' : ''}" data-stt="${plan.stt}" onclick="selectPlanTab(${plan.stt})">
+      <span class="tab-btn-num">${plan.stt}</span>
+      <span>${plan.title}</span>
+    </button>
   `).join('');
+
+  selectPlanTab(activePlanTab);
 }
 
 function initScrollAnimations() {
@@ -854,6 +884,14 @@ function boot() {
   renderPlans();
   initScrollAnimations();
   initBackToTop();
+
+  // Hide loader after 1 second
+  const loader = $('#loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+    }, 1000);
+  }
 }
 
 boot();

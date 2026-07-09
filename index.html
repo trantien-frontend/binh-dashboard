@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Premium Loader -->
+    <div id="loader" class="loader-wrapper">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Đang tải dữ liệu nhân sự...</div>
+    </div>
+
     <div class="app">
       <aside class="sidebar">
         <div class="brand">
@@ -36,8 +42,7 @@
             <p class="eyebrow">Báo cáo nhân sự</p>
             <h1>06 tháng đầu năm 2026</h1>
             <p class="hero-text">
-              Dashboard demo được dựng từ file Excel: tổng hợp nhân sự, giới
-              tính, độ tuổi, phòng ban và kế hoạch hành động 06 tháng cuối năm.
+              Dữ liệu được tổng hợp từ file Excel: tổng hợp nhân sự, giới tính, độ tuổi, phòng ban và kế hoạch hành động 06 tháng cuối năm.
             </p>
           </div>
           <div class="hero-card">
@@ -81,7 +86,10 @@
           <div class="card-header">
             <h3>Kế hoạch / Hành động 06 tháng cuối năm</h3>
           </div>
-          <div id="planList" class="plans"></div>
+          <div class="tabs-container">
+            <div class="tabs-nav" id="planTabsNav"></div>
+            <div class="tab-pane-content" id="planTabPaneContent"></div>
+          </div>
         </section>
       </main>
     </div>
