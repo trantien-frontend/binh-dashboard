@@ -674,7 +674,7 @@ const DATA = {
     {
       "stt": 2,
       "title": "Mở rộng quy mô nhân sự",
-      "action": "Triển khai kế hoạch tuyển dụng 06 tháng cuối năm 2026 nhằm đáp ứng mục tiêu mở rộng kinh doanh, tăng trưởng nhân sự tại hai chi nhánh hà nội và hồ chí minh, đồng thời đảm bảo nguồn nhân lực thay thế khi phát sinh.\nChi nhánh hồ chí minh:\n- Tuyển mới 12–15 nhân sự.\n- Bổ sung vị trí điều hành tour.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\nChi nhánh hà nội:\n- Tuyển mới 05–10 nhân sự.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\n- Tuyển 03 nhân viên kinh doanh tour khách đoàn.\nTuyển dụng thay thế:\n- Chủ động tuyển dụng thay thế các vị trí phát sinh do nghỉ việc, điều chuyển hoặc bổ sung nhân sự, đảm bảo hoạt động của các phòng ban không bị gián đoạn."
+      "action": "Triển khai kế hoạch tuyển dụng 06 tháng cuối năm 2026 nhằm đáp ứng mục tiêu mở rộng kinh doanh, tăng trưởng nhân sự tại hai chi nhánh Hà Nội và Hồ Chí Minh, đồng thời đảm bảo nguồn nhân lực thay thế khi phát sinh.\nChi nhánh Hồ Chí Minh:\n- Tuyển mới 12–15 nhân sự.\n- Bổ sung vị trí điều hành tour.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\nChi nhánh Hà Nội:\n- Tuyển mới 05–10 nhân sự.\n- Thành lập 01 phòng kinh doanh khách sạn (03–05 nhân sự).\n- Tuyển 03 nhân viên kinh doanh tour khách đoàn.\nTuyển dụng thay thế:\n- Chủ động tuyển dụng thay thế các vị trí phát sinh do nghỉ việc, điều chuyển hoặc bổ sung nhân sự, đảm bảo hoạt động của các phòng ban không bị gián đoạn."
     },
     {
       "stt": 3,
@@ -718,7 +718,7 @@ function drawGenderChart() {
   const gender = countBy('gender');
   const total = Object.values(gender).reduce((a, b) => a + b, 0);
   const items = Object.entries(gender);
-  const colors = ['#2563eb', '#38bdf8', '#94a3b8'];
+  const colors = ['#070BA0', '#FF5B00', '#94a3b8'];
   let start = -Math.PI / 2;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   const cx = canvas.width / 2, cy = 95, radius = 72;
@@ -876,6 +876,41 @@ function initBackToTop() {
   });
 }
 
+function initSidebarNav() {
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+  
+  // Click handler to instantly switch active tab
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Scrollspy to automatically switch active tab when scrolling
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPos = window.scrollY + 200; // offset for better transition experience
+
+    document.querySelectorAll('#overview, #charts, #plans').forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    if (current) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
 function boot() {
   initKpis();
   drawGenderChart();
@@ -884,6 +919,7 @@ function boot() {
   renderPlans();
   initScrollAnimations();
   initBackToTop();
+  initSidebarNav();
 
   // Hide loader after 1 second
   const loader = $('#loader');

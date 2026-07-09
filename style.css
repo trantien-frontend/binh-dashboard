@@ -22,43 +22,28 @@ body {
 
 .sidebar {
     width: 260px;
-    background: #090d16;
-    color: #fff;
+    background: #ffffff;
+    color: #1e293b;
     padding: 24px;
     position: fixed;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid #e2e8f0;
 }
 
 .brand {
     display: flex;
-    gap: 12px;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 34px
+    margin-bottom: 34px;
+    padding: 8px 0;
 }
 
-.brand-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
-    display: grid;
-    place-items: center;
-    font-weight: 800;
-    font-size: 24px
-}
-
-.brand h2 {
-    margin: 0;
-    font-size: 18px
-}
-
-.brand p {
-    margin: 3px 0 0;
-    color: #94a3b8;
-    font-size: 13px
+.brand-logo-img {
+    height: 48px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 nav {
@@ -67,7 +52,7 @@ nav {
 }
 
 nav a {
-    color: #94a3b8;
+    color: #64748b;
     text-decoration: none;
     padding: 12px 16px;
     border-radius: 12px;
@@ -76,16 +61,16 @@ nav a {
 }
 
 nav a.active {
-    background: rgba(37, 99, 235, 0.12);
-    color: #38bdf8;
+    background: rgba(7, 11, 160, 0.08);
+    color: #070BA0;
     font-weight: 600;
-    border-left: 3px solid #38bdf8;
+    border-left: 3px solid #FF5B00;
     border-radius: 0 12px 12px 0;
 }
 
 nav a:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: #f1f5f9;
+    color: #0f172a;
 }
 
 .main {
@@ -95,7 +80,7 @@ nav a:hover:not(.active) {
 }
 
 .hero {
-    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 45%), linear-gradient(135deg, #1e3a8a, #0f172a);
+    background: radial-gradient(circle at top right, rgba(255, 91, 0, 0.2), transparent 45%), linear-gradient(135deg, #070BA0, #030654);
     color: #fff;
     border-radius: 24px;
     padding: 40px;
@@ -103,7 +88,7 @@ nav a:hover:not(.active) {
     justify-content: space-between;
     gap: 24px;
     align-items: center;
-    box-shadow: 0 12px 30px -10px rgba(15, 23, 42, 0.2);
+    box-shadow: 0 12px 30px -10px rgba(7, 11, 160, 0.2);
 }
 
 .eyebrow {
@@ -241,7 +226,7 @@ nav a:hover:not(.active) {
 
 .bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, #38bdf8, #2563eb);
+    background: linear-gradient(90deg, #FF5B00, #070BA0);
     border-radius: 999px
 }
 
@@ -286,7 +271,7 @@ nav a:hover:not(.active) {
     display: block;
     font-size: 38px;
     margin: 8px 0;
-    background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+    background: linear-gradient(135deg, #070BA0, #FF5B00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
@@ -382,12 +367,12 @@ tbody tr:hover {
     width: 46px;
     height: 46px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    background: linear-gradient(135deg, #FF5B00, #070BA0);
     color: #fff;
     display: grid;
     place-items: center;
     font-weight: 800;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 4px 12px rgba(7, 11, 160, 0.15);
 }
 
 .plan h4 {
@@ -459,14 +444,14 @@ tbody tr:hover {
     align-items: center;
     gap: 14px;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.04);
+    background: #f8fafc;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid #e2e8f0;
     transition: background 0.2s;
 }
 
 .admin-profile:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: #f1f5f9;
     cursor: pointer;
 }
 
@@ -475,7 +460,7 @@ tbody tr:hover {
     height: 44px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #38bdf8;
+    border: 2px solid #FF5B00;
 }
 
 .admin-info {
@@ -486,12 +471,12 @@ tbody tr:hover {
 .admin-name {
     font-size: 14px;
     font-weight: 700;
-    color: #f8fafc;
+    color: #0f172a;
 }
 
 .admin-role {
     font-size: 12px;
-    color: #94a3b8;
+    color: #64748b;
     margin-top: 3px;
 }
 
@@ -502,7 +487,7 @@ tbody tr:hover {
     width: 46px;
     height: 46px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    background: linear-gradient(135deg, #FF5B00, #070BA0);
     color: #fff;
     border: none;
     outline: none;
@@ -512,7 +497,7 @@ tbody tr:hover {
     justify-content: center;
     font-size: 20px;
     font-weight: bold;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 14px rgba(7, 11, 160, 0.2);
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
@@ -521,7 +506,7 @@ tbody tr:hover {
 
 .back-to-top:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 8px 24px rgba(7, 11, 160, 0.3);
 }
 
 .back-to-top.show {
@@ -591,7 +576,7 @@ tbody tr:hover {
 }
 
 .tab-btn.active .tab-btn-num {
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    background: linear-gradient(135deg, #FF5B00, #070BA0);
     color: #fff;
 }
 
@@ -643,8 +628,8 @@ tbody tr:hover {
 .loader-spinner {
     width: 48px;
     height: 48px;
-    border: 3px solid rgba(56, 189, 248, 0.15);
-    border-top-color: #38bdf8;
+    border: 3px solid rgba(255, 91, 0, 0.15);
+    border-top-color: #FF5B00;
     border-radius: 50%;
     animation: spin 0.8s infinite linear;
 }
